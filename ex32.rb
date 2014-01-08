@@ -3,7 +3,7 @@ fruits = ['apples', 'oranges', 'pears', 'apricots']
 change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
 
 for number in the_count
-	puts "This is count#{number}"
+	puts "This is count #{number}"
 end
 
 fruits.each do |fruit|
