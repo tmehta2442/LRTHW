@@ -1,4 +1,4 @@
-def promt()
+def prompt()
 	print "> "
 end
 
@@ -67,7 +67,7 @@ def laser_weapon_armory()
 	puts "and you need the code to get the bomb out. If you ge the code"
 	puts "wrong 10 times then the lock closes forever and you can't"
 	puts "get the bomb. The code is 3 digits."
-	code = "%s%s%s" % [rand(9)+1, rand(9)+1, rand(9)+1]
+	code = "%s" % [rand(9)+1]
 	print "[keypad]>"
 	guess = gets.chomp()
 	guesses = 0
@@ -138,7 +138,7 @@ def escape_pod()
 	puts "but you don't have time to look. There's 5 pods, which one"
 	puts "do you take?"
 
-	good_pod = rand(5)+1
+	good_pod = 2 #rand(5)+1
 	print "[pod #]>"
 	guess = gets.chomp()
 
@@ -160,7 +160,7 @@ def escape_pod()
 end
 
 ROOMS = {
-	:death => method):death),
+	:death => method(:death),
 	:central_corridor => method(:central_corridor),
 	:laser_weapon_armory => method(:laser_weapon_armory),
 	:the_bridge => method(:the_bridge),
@@ -172,12 +172,11 @@ def runner(map, start)
 	while true
 		room = map[next_one]
 		puts "\n------------"
-		next_one = rom.call()
+		next_one = room.call()
 	end
 end
 
 runner(ROOMS, :central_corridor)
-}
 
 
 
