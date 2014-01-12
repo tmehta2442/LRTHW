@@ -18,8 +18,8 @@ class Game
 		next_room = @start
 			
 			while true
-			room = map[next_one]
 			puts "\n------------"
+			room = method(next_room)
 			next_one = room.call()
 		end
 	end
